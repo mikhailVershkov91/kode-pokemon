@@ -1,0 +1,35 @@
+.item2 {
+	display: flex;
+	box-shadow: 0 13px 27px rgba(0, 0, 0, 0.15);
+	padding: 20px;
+	height: 280px;
+	margin: 10px;
+	/* background-color: #9eabf2; */
+	background-color: #fff;
+	border-radius: 30px;
+	justify-content: space-evenly;
+	flex-direction: column;
+}
+
+.item2:hover {
+	color: red;
+	box-shadow: 10px 50px 70px rgba(89, 2, 2, 0.15);
+}
+
+.img {
+	display: block;
+	text-align: center;
+	margin-bottom: 20px;
+	height: 230px;
+}
+
+.name {
+	display: block;
+	font-size: 14px;
+	margin-bottom: 10px;
+}
+
+.artist {
+	display: block;
+  font-size: 14px;
+}
