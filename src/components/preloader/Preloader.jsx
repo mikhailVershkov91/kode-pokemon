@@ -4,7 +4,7 @@ import classes from './Preloader.module.css';
 const Preloader = () => {
 	return (
 		<div>
-			<div className={classes.ldsRoller}>
+			<div className={classes.ldsRoller + " " + classes.preloader}>
 				<div></div>
 				<div></div>
 				<div></div>

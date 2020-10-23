@@ -36,12 +36,16 @@
 .select {
 	width: 200px;
 	padding: 5px;
-	margin-top: 5px;
+	margin-top: 10px;
 	margin-bottom: 70px;
 	border-radius: 10px;
 	border: none;
 	box-shadow: 0 13px 27px rgba(0, 0, 0, 0.15);
 	font-family: "Chilanka", cursive;
+}
+
+.select:hover {
+	cursor: pointer;
 }
 
 .select2 {
@@ -52,6 +56,10 @@
 	border: none;
 	box-shadow: 0 13px 27px rgba(0, 0, 0, 0.15);
 	font-family: "Chilanka", cursive;
+}
+
+.select2:hover {
+	cursor: pointer;
 }
 /* Sidebar end */
 

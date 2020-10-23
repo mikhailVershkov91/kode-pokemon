@@ -1,11 +1,9 @@
 import React from "react";
 import s from "./Otp.module.css";
-import Header from "../Header/Header";
 
 const Otp = () => {
 	return (
 		<div>
-			<Header />
 			<div className={`${s.standartSection} ${s.loginWrap}`}>
 				<div className={s.container}>
 					<h3 className={`${s.title} ${s.textCenter} ${s.textUppercase}`}>

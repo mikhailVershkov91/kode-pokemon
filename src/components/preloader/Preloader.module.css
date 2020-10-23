@@ -82,3 +82,10 @@
     transform: rotate(360deg);
   }
 }
+
+.preloader {
+  position: absolute;
+  z-index: 999;
+  left: 50%;
+  top: 50%;
+}
