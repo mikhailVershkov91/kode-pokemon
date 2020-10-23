@@ -11,7 +11,7 @@ const PokemonsList = (props) => {
 
 	return (
 		<div>
-			<HeaderPok />
+			{/* <HeaderPok /> */}
 			<div className={s.container}>
 				<Sidebar />
 			</div>

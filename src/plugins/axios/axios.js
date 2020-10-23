@@ -27,9 +27,8 @@ export const pokemonsAPI = {
       .then((response) => response.data);
   },
   getCardInformation(cardId) {
-    debugger;
     return instance
-      .get(`https://api.pokemontcg.io/v1/cards?id=${cardId}`)
+      .get(`https://api.pokemontcg.io/v1/cards/${cardId}`)
       .then((response) => response.data);
   }
 };
