@@ -1,0 +1,43 @@
+import React, { lazy, Suspense } from "react";
+import "./App.css";
+import { BrowserRouter, Route } from "react-router-dom";
+import Auth from "./components/Auth/Auth";
+import Otp from "./components/Otp/Otp";
+import { Provider } from "react-redux";
+import store from "./store/store";
+// import PokemonsList from "./components/PokemonsList/PokemonsList";
+// import PokemonCard from "./components/PokemonCard/PokemonCard";
+import PokemonsListContainer from "./components/PokemonsList/PokemonsList";
+// import PCard from "./components/PCard/PCard";
+import Preloader from "./components/preloader/Preloader";
+
+const PCard = lazy(() => import("./components/PCard/PCard"));
+
+class App extends React.Component {
+	render() {
+		return (
+			<div>
+				<Route path="/login" render={() => <Auth />} />
+				<Route path="/otp" render={() => <Otp />} />
+				<Route path="/pokemonslist" render={() => <PokemonsListContainer />} />
+				<Suspense fallback={<Preloader />}>
+					<Route path="/pokemoncard/:id" render={() => <PCard />} />
+				</Suspense>
+			</div>
+		);
+	}
+}
+
+const MainApp = () => {
+	return (
+		<BrowserRouter>
+			<Provider store={store}>
+				<App />
+			</Provider>
+		</BrowserRouter>
+	);
+};
+
+export default MainApp;
+
+/* <Route path="/pokemoncard/:id" render={() => <PCard />} /> */
