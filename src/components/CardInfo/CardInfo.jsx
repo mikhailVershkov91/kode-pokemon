@@ -1,18 +1,22 @@
 import React from "react";
-import Header from "../Header/Header";
-import s from "./PCard.module.css";
+// import Header from "../Header/Header";
+import s from "./CardInfo.module.css";
 import { withRouter, NavLink } from "react-router-dom";
 import { getCardInfo } from "../../store/pokemonsReducer";
 import { compose } from "redux";
 import { connect } from "react-redux";
 import Preloader from "../preloader/Preloader";
 
-class PCard extends React.Component {
+class cardInfo extends React.Component {
 	componentDidMount() {
 		this.props.getCardInfo(this.props.match.params.id);
 	}
 
 	render() {
+		if (this.props.isFetching) {
+			return <Preloader />;
+		}
+
 		return (
 			<div>
 				{this.props.isFetching && <Preloader />}
@@ -32,22 +36,24 @@ class PCard extends React.Component {
 						{/* Pokemon Info start */}
 						<div className={s.sectionInfo}>
 							<div className={s.responseInfo}>
-								<h6 className={s.info}>Name: {this.props.cardInfo.name}</h6>
-								<h6 className={s.info}>Type: {this.props.cardInfo.types}</h6>
-								<h6 className={s.info}>
+								<span className={s.info}>Name: {this.props.cardInfo.name}</span>
+								<span className={s.info}>
+									Type: {this.props.cardInfo.types}
+								</span>
+								<span className={s.info}>
 									Subtype: {this.props.cardInfo.subtype}
-								</h6>
+								</span>
 							</div>
 							<hr></hr>
 							{/* <div className={s.skillsInfo}>
 								{this.props.cardInfo.attacks.map((attack, key) => (
 									<div>
-										<h6 className={s.skill}>Attack name: {attack.name} </h6>
-										<h6 className={s.skill}>Attack damage: {attack.damage}</h6>
-										<h6 className={s.skill}>Attack cost: {attack.cost[0]} </h6>
-										<h6 className={s.skill}>
+										<span className={s.skill}>Attack name: {attack.name} </span>
+										<span className={s.skill}>Attack damage: {attack.damage}</span>
+										<span className={s.skill}>Attack cost: {attack.cost[0]} </span>
+										<span className={s.skill}>
 											Evolves form: {this.props.cardInfo.evolvesFrom}{" "}
-										</h6>
+										</span>
 									</div>
 								))}
 							</div> */}
@@ -81,4 +87,4 @@ const mapStateToProps = (state) => ({
 export default compose(
 	connect(mapStateToProps, { getCardInfo }),
 	withRouter
-)(PCard);
+)(cardInfo);

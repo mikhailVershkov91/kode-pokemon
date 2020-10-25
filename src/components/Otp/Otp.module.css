@@ -55,6 +55,11 @@
 	border-radius: 10px;
 	font-family: "Chilanka", cursive;
 	font-weight: bold;
+	margin-bottom: 5px;
+}
+
+.formInputContainer {
+	margin-bottom: 40px;
 }
 
 .formInput:hover {
@@ -77,4 +82,26 @@
 	transition: 0.2s;
 	cursor: pointer;
 	color: white;
+}
+
+.buttonCode {
+	border: none;
+	background: #ffff;
+}
+
+.buttonCode:hover {
+	cursor: pointer;
+	font-weight: bold;
+}
+
+/* ERROR */
+
+.formControl.error input {
+  border: 5px red solid;
+}
+
+.formControl.error span {
+  /* position: absolute; */
+  color: red;
+  z-index: 99;
 }

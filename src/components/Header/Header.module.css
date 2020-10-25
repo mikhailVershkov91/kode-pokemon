@@ -37,7 +37,7 @@ ul {
 
 .header {
 	padding: 10px 0;
-	border-bottom: 0 solid grey;
+	/* border-bottom: 0 solid grey; */
 	/* background-color: yellow; */
 	background-color: red;
 	box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);

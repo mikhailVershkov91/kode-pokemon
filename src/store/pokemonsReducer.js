@@ -1,5 +1,6 @@
 import { pokemonsAPI } from "../plugins/axios/axios";
 
+
 // actions
 const SET_TYPES = "SET_TYPES";
 const SET_SUBTYPES = "SET_SUBTYPES";
