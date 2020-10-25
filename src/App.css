@@ -40,5 +40,14 @@
 body {
 	color: #212121;
   font: 400 14px/1 'Chilanka', cursive;
+}
 
+.mainPage {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.mainPage__container {
+  flex: 1 0 auto;
 }

@@ -1,8 +1,12 @@
 import { applyMiddleware, compose, createStore, combineReducers } from 'redux';
 import pokemonsReducer from './pokemonsReducer';
 import thunkMiddleware from 'redux-thunk';
+import { reducer as formReducer } from 'redux-form';
+import authReducer from './authReducer';
 
 let reducers = combineReducers({
+  form: formReducer,
+  auth: authReducer,
   pokemons: pokemonsReducer
 });
 

@@ -52,12 +52,16 @@
 }
 
 .formInput {
-  margin-bottom: 40px;
   padding: 16px 20px;
   color: black;
   border-radius: 10px;
   font-family: "Chilanka", cursive;
   font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.formInputContainer {
+  margin-bottom: 40px;
 }
 
 .formInput:hover {
@@ -80,4 +84,20 @@
 	transition: 0.2s;
   cursor: pointer;
   color: white;
+}
+
+/* ERROR */
+
+.formControl.error input {
+  border: 5px red solid;
+}
+
+.formControl.error span {
+  color: red;
+}
+
+.formSummaryError {
+  border: 3px blue solid;
+  padding: 5px;
+  color: red;
 }
