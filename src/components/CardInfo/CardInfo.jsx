@@ -20,6 +20,7 @@ class cardInfo extends React.Component {
 		return (
 			<div className={s.mainContainer}>
 				{/* {this.props.isFetching && <Preloader />} */}
+
 				<div className={s.infoTop}>
 					<div className={s.cardImage}>
 						<img src={this.props.cardInfo.imageUrl} />
@@ -37,24 +38,35 @@ class cardInfo extends React.Component {
 							</div>
 							<hr></hr>
 						</div>
+
 						<div className={s.information}>
-							<div>
-								<span>Attack name:</span> {this.props.cardInfo.attacks[0].name}
-							</div>
-							<div>
-								<span>Attack damage:</span> {this.props.cardInfo.attacks[0].damage}
-							</div>
-							<div>
-								<span>Attack cost:</span> {this.props.cardInfo.attacks[0].cost[0]}
-							</div>
-							<div>
-								<span>Evolves form:</span> {this.props.cardInfo.evolvesFrom}
-							</div>
+							{this.props.cardInfo.attacks && (
+								<>
+									<div>
+										<span>Attack name:</span>
+										{this.props.cardInfo.attacks[0].name}
+									</div>
+									<div>
+										<span>Attack damage:</span>
+										{this.props.cardInfo.attacks[0].damage}
+									</div>
+									<div>
+										<span>Attack cost:</span>
+										{this.props.cardInfo.attacks[0].cost[0]}
+									</div>
+									<div>
+										<span>Evolves form:</span> {this.props.cardInfo.evolvesFrom}
+									</div>
+								</>
+							)}
 						</div>
 					</div>
 				</div>
+
 				<div className={s.infoBottom}>
-					<span>{this.props.cardInfo.attacks[0].text}</span>
+					{this.props.cardInfo.attacks && (
+						<span>{this.props.cardInfo.attacks[0].text}</span>
+					)}
 				</div>
 			</div>
 		);

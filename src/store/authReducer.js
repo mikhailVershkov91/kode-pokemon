@@ -4,8 +4,8 @@ const IS_OTP_CORRECT = "IS_OTP_CORRECT";
 
 //state
 const initialState = {
-  isAuth: false,
-  isOtpCorrect: false
+	isAuth: Boolean(localStorage.getItem("token")),
+	isOtpCorrect: false,
 };
 
 //reducer
@@ -13,9 +13,9 @@ const authReducer = (state = initialState, action) => {
 	switch (action.type) {
 		case TOGGLE_IS_AUTH: {
 			return { ...state, isAuth: action.isAuth };
-    }
-    case IS_OTP_CORRECT: {
-			return { ...state, isOtpCorrect: action.isOtpCorrect};
+		}
+		case IS_OTP_CORRECT: {
+			return { ...state, isOtpCorrect: action.isOtpCorrect };
 		}
 
 		default:
