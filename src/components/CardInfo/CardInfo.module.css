@@ -1,105 +1,63 @@
 .mainContainer {
 	display: flex;
-  flex-wrap: wrap;
-  /* background-color: rgb(158, 171, 242); */
-  background-color: #fff;
-	/* position: fixed; */
-	top: 75px;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  /* border-top: 3px solid #000; */
-}
-
-/* Image */
-.section {
-  display: flex;
+	margin: 10px;
 	flex-direction: column;
-	justify-content: space-between;
-	height: 538px;
-	width: 832px;
-  /* background-color: rgb(158, 171, 242); */
-  background-color: #fff;
 	padding: 10px;
-	margin-top: 20px;
-  margin-left: 20px;
-  box-shadow: 0 13px 27px rgba(0, 0, 0, 0.15);
+	height: 100vh;
+	box-sizing: border-box;
+}
+
+.infoTop {
+	display: flex;
+	justify-content: space-between;
+}
+
+.cardImage {
+	box-shadow: 0 13px 27px rgba(0, 0, 0, 0.15);
   border-radius: 20px;
+  margin-left: 150px;
 }
 
-.section .image {
-	display: block;
-	align-items: center;
+.cardImage img {
+	width: 360px;
 }
 
-/* Info */
-.sectionInfo {
+.cardInfo {
   display: flex;
   flex-direction: column;
-	height: 538px;
-	width: 500px;
-  /* background-color: rgb(158, 171, 242); */
-  background-color: #fff;
-	padding: 10px;
+	width: 50%;
+	box-shadow: 0 13px 27px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+  padding: 10px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.infoBottom {
+	box-shadow: 0 13px 27px rgba(0, 0, 0, 0.15);
+	border-radius: 20px;
 	margin-top: 20px;
-  margin-left: 20px;
-  box-shadow: 0 13px 27px rgba(0, 0, 0, 0.15);
-  border-radius: 20px;
+  height: 15%;
+  display: flex;
+  align-items: center;
 }
 
-.responseInfo {
+.infoBottom span {
+  font-size: 20px;
   display: block;
-  box-shadow: 0 13px 27px rgba(0, 0, 0, 0.15);
-  padding: 20px;
-	height: 175px;
-  width: 400px;
-  margin: 20px;
-  border-radius: 20px;
+  margin: 0 20px;
 }
 
-.info {
-  font-size: 21px;
-  margin-bottom: 30px;
-  margin-top: 30px;
+.information {
+  font-size: 30px;
+  margin: 30px;
 }
 
-.skillsInfo {
-  display: flex;
-  /* flex-direction: row; */
-  justify-content: space-evenly;
-  box-shadow: 0 13px 27px rgba(0, 0, 0, 0.15);
-  padding: 20px;
-	height: 200px;
-  width: 400px;
-  margin: 20px;
-  border-radius: 20px;
+.information span {
+  font-weight: bold;
+  margin-right: 10px;
 }
 
-.skill {
-  font-size: 21px;
-  margin-bottom: 30px;
-  margin-top: 30px;
-}
-
-/* Title */
-.sectionTitle {
-  display: flex;
-  height: 80px;
-	width: 1392px;
-  /* background-color: rgb(158, 171, 242); */
-  background-color: #fff;
-  margin-top: 15px;
-  margin-left: 20px;
-  box-shadow: 0 13px 27px rgba(0, 0, 0, 0.15);
-  border-radius: 20px;
-}
-
-.title {
-  width: 832px;
-  font-size: 18px;
-  padding: 15px;
-}
-
-.button {
-  display: flex;
+.information div {
+  margin-bottom: 20px;
 }

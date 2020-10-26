@@ -128,3 +128,59 @@
 // })(Sidebar);
 
 // export default SidebarContainer;
+
+<div className={s.mainContainer}>
+						{/* Image start*/}
+						<div className={s.infoTop}>
+							<div className={s.section}>
+								<div>
+									<img
+										src={this.props.cardInfo.imageUrl}
+										className={s.image}
+										alt="Pokemon"
+									></img>
+								</div>
+							</div>
+							{/* Image end */}
+							{/* Pokemon Info start */}
+							<div className={s.sectionInfo}>
+								<div className={s.responseInfo}>
+									<span className={s.info}>
+										Name: {this.props.cardInfo.name}
+									</span>
+									<span className={s.info}>
+										Type: {this.props.cardInfo.types}
+									</span>
+									<span className={s.info}>
+										Subtype: {this.props.cardInfo.subtype}
+									</span>
+								</div>
+								<hr></hr>
+								<div className={s.skillsInfo}>
+									{/* {this.props.cardInfo.attacks.map((attack, key) => (
+									<div>
+										<span className={s.skill}>Attack name: {attack.name} </span>
+										<span className={s.skill}>Attack damage: {attack.damage}</span>
+										<span className={s.skill}>Attack cost: {attack.cost[0]} </span>
+										<span className={s.skill}>
+											Evolves form: {this.props.cardInfo.evolvesFrom}{" "}
+										</span>
+									</div>
+								))} */}
+								</div>
+							</div>
+						</div>
+						{/* Pokemon Info end */}
+						{/* Pokemon Title start */}
+						<div className={s.sectionTitle}>
+							gvbhnjj
+							{/* {!this.props.cardInfo.ability.text && (
+									<p className={s.title}>{"no info"}</p>
+								)}
+								<p className={s.title}>{this.props.cardInfo.ability.text}</p>
+								<NavLink to={"/pokemonslist"}>
+									<button className={s.button}>Back</button>
+								</NavLink> */}
+						</div>
+						{/* Pokemon Title end */}
+					{/* </div> */}

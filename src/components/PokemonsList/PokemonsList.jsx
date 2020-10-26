@@ -81,15 +81,18 @@ const PokemonsList = ({
 								value={selectType}
 								onChange={handleTypeChange}
 							>
+								{/* <option value="none" selected disabled hidden>
+									Select an Option
+								</option> */}
 								{pokemonTypes.map((type, key) => (
-									<option value={type} key={key}>
+									<option defaultValue={"Pisurka"} value={type} key={key}>
 										{type}
 									</option>
 								))}
 							</select>
 						</div>
 						<div className={s.item}>
-						<label>Subtype</label>
+							<label>Subtype</label>
 							<select
 								className={s.select}
 								value={selectSubtype}
