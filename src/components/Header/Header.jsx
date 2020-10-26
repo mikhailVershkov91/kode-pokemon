@@ -22,7 +22,7 @@ const Header = (props) => {
 					<img className={s.logo} src={logo} alt="Logo" />
 				</div>
 				<nav className={s.headerNav}>
-				{!props.isAuth && <NavLink to={"/login"}>Login</NavLink>}
+					{!props.isAuth && <NavLink to={"/login"}>Login</NavLink>}
 					{props.isAuth && (
 						<NavLink onClick={onClick} to={"/login"}>
 							Logout
