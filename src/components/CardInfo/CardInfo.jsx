@@ -18,62 +18,44 @@ class cardInfo extends React.Component {
 		}
 
 		return (
-			<div>
-				{this.props.isFetching && <Preloader />}
-				{!this.props.isFetching && (
-					<div className={s.mainContainer}>
-						{/* Image start*/}
-						<div className={s.section}>
+			<div className={s.mainContainer}>
+				{/* {this.props.isFetching && <Preloader />} */}
+				<div className={s.infoTop}>
+					<div className={s.cardImage}>
+						<img src={this.props.cardInfo.imageUrl} />
+					</div>
+					<div className={s.cardInfo}>
+						<div className={s.information}>
 							<div>
-								<img
-									src={this.props.cardInfo.imageUrl}
-									className={s.image}
-									alt="Pokemon"
-								></img>
+								<span>Name:</span> {this.props.cardInfo.name}
 							</div>
-						</div>
-						{/* Image end */}
-						{/* Pokemon Info start */}
-						<div className={s.sectionInfo}>
-							<div className={s.responseInfo}>
-								<span className={s.info}>Name: {this.props.cardInfo.name}</span>
-								<span className={s.info}>
-									Type: {this.props.cardInfo.types}
-								</span>
-								<span className={s.info}>
-									Subtype: {this.props.cardInfo.subtype}
-								</span>
+							<div>
+								<span>Type:</span> {this.props.cardInfo.types}
+							</div>
+							<div>
+								<span>Subtype:</span> {this.props.cardInfo.subtype}
 							</div>
 							<hr></hr>
-							{/* <div className={s.skillsInfo}>
-								{this.props.cardInfo.attacks.map((attack, key) => (
-									<div>
-										<span className={s.skill}>Attack name: {attack.name} </span>
-										<span className={s.skill}>Attack damage: {attack.damage}</span>
-										<span className={s.skill}>Attack cost: {attack.cost[0]} </span>
-										<span className={s.skill}>
-											Evolves form: {this.props.cardInfo.evolvesFrom}{" "}
-										</span>
-									</div>
-								))}
-							</div> */}
 						</div>
-						{/* Pokemon Info end */}
-						{/* Pokemon Title start */}
-						<div className={s.titleContainer}>
-							{/* <div className={s.sectionTitle}>
-								{!this.props.cardInfo.ability.text && (
-									<p className={s.title}>{"no info"}</p>
-								)}
-								<p className={s.title}>{this.props.cardInfo.ability.text}</p>
-								<NavLink to={"/pokemonslist"}>
-									<button className={s.button}>Back</button>
-								</NavLink>
-							</div> */}
+						<div className={s.information}>
+							<div>
+								<span>Attack name:</span> {this.props.cardInfo.attacks[0].name}
+							</div>
+							<div>
+								<span>Attack damage:</span> {this.props.cardInfo.attacks[0].damage}
+							</div>
+							<div>
+								<span>Attack cost:</span> {this.props.cardInfo.attacks[0].cost[0]}
+							</div>
+							<div>
+								<span>Evolves form:</span> {this.props.cardInfo.evolvesFrom}
+							</div>
 						</div>
-						{/* Pokemon Title end */}
 					</div>
-				)}
+				</div>
+				<div className={s.infoBottom}>
+					<span>{this.props.cardInfo.attacks[0].text}</span>
+				</div>
 			</div>
 		);
 	}
