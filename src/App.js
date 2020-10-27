@@ -22,7 +22,7 @@ class App extends React.Component {
 			<div className="App">
 				<div className="mainPage">
 					<Header />
-					<Route exact path="/Pokemon" render={() => <Welcome />} />
+					<Route exact path="/" render={() => <Welcome />} />
 					<Route path="/login" render={() => <Auth />} />
 					<Route path="/otp" render={() => <Otp />} />
 					<Route
@@ -40,7 +40,7 @@ class App extends React.Component {
 
 const MainApp = () => {
 	return (
-		<BrowserRouter>
+		<BrowserRouter basename={process.env.PUBLIC_URL}>
 			<Provider store={store}>
 				<App />
 			</Provider>
