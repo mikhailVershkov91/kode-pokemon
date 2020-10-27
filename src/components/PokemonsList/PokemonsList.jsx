@@ -85,7 +85,7 @@ const PokemonsList = ({
 									Select an Option
 								</option> */}
 								{pokemonTypes.map((type, key) => (
-									<option defaultValue={"Pisurka"} value={type} key={key}>
+									<option value={type} key={key}>
 										{type}
 									</option>
 								))}

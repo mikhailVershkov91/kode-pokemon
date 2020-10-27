@@ -11,7 +11,7 @@ import PokemonsListContainer from "./components/PokemonsList/PokemonsList";
 // import PCard from "./components/PCard/PCard";
 import Preloader from "./components/preloader/Preloader";
 import Header from "./components/Header/Header";
-import CardInfo from './components/CardInfo/CardInfo'
+import CardInfo from "./components/CardInfo/CardInfo";
 import Welcome from "./components/Welcome/Welcome";
 
 // const PCard = lazy(() => import("./components/PCard/PCard"));
@@ -21,9 +21,8 @@ class App extends React.Component {
 		return (
 			<div className="App">
 				<div className="mainPage">
-
 					<Header />
-					<Route exact path="/" render={() => <Welcome />} />
+					<Route exact path="/Pokemon" render={() => <Welcome />} />
 					<Route path="/login" render={() => <Auth />} />
 					<Route path="/otp" render={() => <Otp />} />
 					<Route
@@ -31,7 +30,7 @@ class App extends React.Component {
 						render={() => <PokemonsListContainer />}
 					/>
 					{/* <Suspense fallback={<Preloader />}> */}
-						<Route path="/pokemoncard/:id" render={() => <CardInfo />} />
+					<Route path="/pokemoncard/:id" render={() => <CardInfo />} />
 					{/* </Suspense> */}
 				</div>
 			</div>
