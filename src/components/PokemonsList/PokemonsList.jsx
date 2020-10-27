@@ -110,9 +110,9 @@ const PokemonsList = ({
 				<div className={s.content}>
 					<div className={s.col}>
 						{cardsData.map((card, key) => (
-							<NavLink to={"/pokemoncard/" + card.id}>
+							// <NavLink to={"/pokemoncard/" + card.id}>
 								<CardItem card={card} key={card.id} />
-							</NavLink>
+							// </NavLink>
 						))}
 					</div>
 				</div>

@@ -3,29 +3,36 @@ import React from "react";
 import s from "./Modal.module.css";
 import { Modal } from "react-bootstrap";
 
-
 const ModalWindow = (props) => {
 	return (
-		<Modal>
-			<Modal.Header closeButton>
-				<Modal.Title>Modal title</Modal.Title>
+		<Modal
+
+		  className={s.modal}
+			show={props.show}
+			onHide={props.onHide}
+			autoFocus={false}
+		>
+			<>
+			<Modal.Header className={s.modalHeader} closeButton closeLabel>
+				<Modal.Title><span>{props.card.name}</span>
+
+				</Modal.Title>
 			</Modal.Header>
-
-			<Modal.Body>
-				<p>{props.info.name}</p>
+			</>
+			<>
+			<Modal.Body className={s.modalBody}>
+				<img src={props.card.imageUrl}></img>
 			</Modal.Body>
-
-			<Modal.Footer>
-				{/* <Button variant="secondary">Close</Button> */}
+			</>
+			<>
+			<Modal.Footer className={s.modalFooter}>
+				<span>Rarity: {props.card.rarity}</span>
+				<span>Series: {props.card.series}</span>
+				<span>HP: {props.card.hp}</span>
 			</Modal.Footer>
+			</>
 		</Modal>
 	);
 };
 
-// const mapStateToProps = (state) => ({
-// 	isAuth: state.auth.isAuth,
-// 	isOtpCorrect: state.auth.isOtpCorrect,
-// });
-
-// export default connect(mapStateToProps, { toggleIsAuth, checkOtp })(Header);
 export default ModalWindow;
