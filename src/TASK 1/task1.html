@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>First_task</title>
+	</head>
+	<body>
+		<h1>Task 1</h1>
+		<script>
+			const getObjectProperty = (obj, path, defaultValue) => {
+				let arr = path.split(".");
+				let res = null;
+
+				for (let i = 0; i < arr.length; i++) {
+					if (obj[arr[i]]) {
+						res = obj[arr[i]];
+						obj = res;
+					} else if (!obj[arr[i]]) {
+						res = defaultValue;
+						if (!defaultValue) {
+							return undefined;
+						}
+						obj = res;
+					}
+				}
+				return res;
+			};
+
+			const obj = {
+				pupa: {
+					lupa: {
+						beep: "boop",
+					},
+					foo: "bar",
+				},
+			};
+
+			// console.log(getObjectProperty(obj, "pupa.lupa")); // > { beep : 'boop' }
+			// console.log(getObjectProperty(obj, "pupa.lupa.beep")); // > 'boop'
+			// console.log(getObjectProperty(obj, "pupa.foo")); // > 'bar'
+			// console.log(getObjectProperty(obj, "pupa.ne.tuda")); // > undefined
+			// console.log(getObjectProperty(obj, "pupa.ne.tuda", true)); // > true
+			// console.log(getObjectProperty(obj, "pupa.ne.tuda", "Default value")); // > 'Default value'
+		</script>
+	</body>
+</html>
