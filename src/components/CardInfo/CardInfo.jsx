@@ -67,6 +67,9 @@ class cardInfo extends React.Component {
 					{this.props.cardInfo.attacks && (
 						<span>{this.props.cardInfo.attacks[0].text}</span>
 					)}
+					<NavLink to={"/pokemonslist"}>
+					<button className={s.button}>Back</button>
+					</NavLink>
 				</div>
 			</div>
 		);
