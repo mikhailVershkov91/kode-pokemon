@@ -1,68 +1,53 @@
-<!-- This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Ссылка на проект: https://kode-pokemon-heroku.herokuapp.com/
 
-## Available Scripts
+Разбиение проекта на подзадачи:
+1.Создание проекта через Create React App;
+Разбиение на компоненты;
+Сложность: легко;
+Время выполнения: 1 день.
 
-In the project directory, you can run:
+2. Верстка страниц;
+   Сложность: легко;
+   Время выполнения: 1 день.
 
-### `npm start`
+3. Создание Redux-store и Reducers;
+   Сложность: высокая;
+   Время выполнения: на протяжении всего проекта.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+4. Добавление роутинга;
+   Сложность: легко;
+   Время выполнения: 30 минут.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+5. Валидация полей Login и One Time Password;
+   Сложность: средняя;
+   Время выполнения: 1 день.
 
-### `npm test`
+6. Получение данных (карточек) от сервера
+   Сложность: высокая;
+   Время выполнения: 2 дня.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+7. Вывод дополнительных данных при нажатии на карточку
+   Сложность: высокая;
+   Время выполнения: 3 дня.
 
-### `npm run build`
+8. Добавление проекта на удаленный репозиторий
+   Сложность: средняя;
+   Время выполнения: 1 день.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Возникшие сложности в процессе разработки:
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+1. Разбор Pokemon API. Сначала думал, что карточки генерируются при выбранном типе и подтипе, а оказалось, что они будут появляться в любом из вариантов и друг от друга не зависят.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. При нажатии на карточку выводилась ошибка, т.к. некоторые данные не успевали приходить от сервера.
 
-### `npm run eject`
+3. При обновлении страницы Logout менялся на Login
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+4. Во время загрузки приложения отображалась страница, которая не была включена в роутинг
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+5. В Github pages ломался роутинг, поэтому задеплоил на Heroku.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Выполнены задания со звездочкой:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify -->
+1. Некоторая анимация интерфейса;
+2. Сохранение сессии авторизованного пользователя
+3. Быстрый просмотр карточки в модальном окне
