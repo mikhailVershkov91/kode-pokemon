@@ -8,7 +8,6 @@ import {
 	getCardsBySubtypes,
 } from "../../store/pokemonsReducer";
 import { connect } from "react-redux";
-import { NavLink } from "react-router-dom";
 import CardItem from "../CardItem/CardItem";
 
 const PokemonsList = ({
@@ -49,28 +48,9 @@ const PokemonsList = ({
 		setSelectSubtype(event.target.value);
 	};
 
-	// let pagesCount = Math.ceil(totalCardsCount/pageSize);
-	// let pages = [];
-
-	// for (let i=1; i <= pagesCount; i++) {
-	// 	pages.push(i);
-	// }
-
-	// const handlePage = (event) => {
-	// 	setCurrentPage(event.target.value)
-	// }
-
 	return (
 		<div>
 			{isFetching && <Preloader />}
-			{/* <div>
-				{pages.map(page => {
-					return
-					<p className={currentPage === page && s.selectedPage}
-					onClick={handlePage}>{page}</p>
-				})}
-
-			</div> */}
 			<div className={s.mainContainer}>
 				<div className={s.list}>
 					<div className={s.section}>
@@ -81,9 +61,6 @@ const PokemonsList = ({
 								value={selectType}
 								onChange={handleTypeChange}
 							>
-								{/* <option value="none" selected disabled hidden>
-									Select an Option
-								</option> */}
 								{pokemonTypes.map((type, key) => (
 									<option value={type} key={key}>
 										{type}
@@ -110,9 +87,7 @@ const PokemonsList = ({
 				<div className={s.content}>
 					<div className={s.col}>
 						{cardsData.map((card, key) => (
-							// <NavLink to={"/pokemoncard/" + card.id}>
-								<CardItem card={card} key={card.id} />
-							// </NavLink>
+							<CardItem card={card} key={card.id} />
 						))}
 					</div>
 				</div>

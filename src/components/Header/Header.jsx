@@ -1,5 +1,4 @@
 import React from "react";
-
 import s from "./Header.module.css";
 import logo from "../../img/pokemon-go.png";
 import { connect } from "react-redux";

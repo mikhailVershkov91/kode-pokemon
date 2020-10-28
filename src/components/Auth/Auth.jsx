@@ -1,5 +1,4 @@
 import React from "react";
-//import Preloader from '../preloader/Preloader';
 import s from "./Auth.module.css";
 import { reduxForm, Field } from "redux-form";
 import { Redirect } from "react-router-dom";
@@ -10,7 +9,6 @@ import {
 	maxLength15,
 	email,
 } from "../../utils/validators/validators";
-// import { Input } from "../common/FormsControls/FormsControls";
 
 const Input = ({ input, meta, ...props }) => {
 	const hasError = meta.touched && meta.error;
@@ -60,7 +58,6 @@ const AuthReduxForm = reduxForm({
 
 const Auth = (props) => {
 	const token = localStorage.getItem("token");
-	console.log(token);
 
 	props.toggleIsAuth(true);
 
@@ -68,9 +65,8 @@ const Auth = (props) => {
 		props.toggleIsAuth(false);
 	}
 
-	const onSubmit = (formData, e) => {
-		// e.preventDefault();
-		if (formData.login === "kode@kode.ru" && formData.password === "b") {
+	const onSubmit = (formData) => {
+		if (formData.login === "kode@kode.ru" && formData.password === "Enk0deng") {
 			localStorage.setItem("token", "logged_in_already");
 			props.toggleIsAuth(true);
 		} else {
