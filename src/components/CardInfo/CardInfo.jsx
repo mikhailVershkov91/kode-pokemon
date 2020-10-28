@@ -1,5 +1,4 @@
 import React from "react";
-// import Header from "../Header/Header";
 import s from "./CardInfo.module.css";
 import { withRouter, NavLink } from "react-router-dom";
 import { getCardInfo } from "../../store/pokemonsReducer";
@@ -19,8 +18,6 @@ class cardInfo extends React.Component {
 
 		return (
 			<div className={s.mainContainer}>
-				{/* {this.props.isFetching && <Preloader />} */}
-
 				<div className={s.infoTop}>
 					<div className={s.cardImage}>
 						<img src={this.props.cardInfo.imageUrl} />
@@ -68,7 +65,7 @@ class cardInfo extends React.Component {
 						<span>{this.props.cardInfo.attacks[0].text}</span>
 					)}
 					<NavLink to={"/pokemonslist"}>
-					<button className={s.button}>Back</button>
+						<button className={s.button}>Back</button>
 					</NavLink>
 				</div>
 			</div>

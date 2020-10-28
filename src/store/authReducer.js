@@ -1,14 +1,11 @@
-// actions
 const TOGGLE_IS_AUTH = "TOGGLE_IS_AUTH";
 const IS_OTP_CORRECT = "IS_OTP_CORRECT";
 
-//state
 const initialState = {
 	isAuth: Boolean(localStorage.getItem("token")),
 	isOtpCorrect: false,
 };
 
-//reducer
 const authReducer = (state = initialState, action) => {
 	switch (action.type) {
 		case TOGGLE_IS_AUTH: {
@@ -23,7 +20,6 @@ const authReducer = (state = initialState, action) => {
 	}
 };
 
-//action creator
 export const toggleIsAuth = (isAuth) => ({
 	type: "TOGGLE_IS_AUTH",
 	isAuth,
